@@ -17,7 +17,7 @@ jobs:
         uses: docker/login-action@v2
         with:
           registry: ${{ env.REGISTRY }}
-          username: YimMenu
+          username: yimmenu
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build and push Docker image
         uses: docker/build-push-action@v3
@@ -26,4 +26,4 @@ jobs:
           file: Dockerfile
           push: true
           tags: |
-            ghcr.io/YimMenu/YimMenu:latest
+            ghcr.io/yimmenu/yimmenu:latest
